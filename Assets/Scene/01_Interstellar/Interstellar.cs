@@ -18,7 +18,7 @@ public class Interstellar : MonoBehaviour
     {
         _button.onClick.AddListener(Call);
         _material = transition.GetComponent<Image>().material;
-        _material.SetFloat(Value,6.1f);
+        _material.SetFloat(Value,18.62f);
     }
 
     private async void Call()
@@ -27,8 +27,9 @@ public class Interstellar : MonoBehaviour
         DontDestroyOnLoad(parent);
         transition.GameObject().SetActive(true);
         _button.GameObject().SetActive(false);
-        var tween=_material.DOFloat(18.8f, Value, 4f);
-        tween.onComplete += () => { SceneLoader.GetInstance().animationComplete = true; };
+        var tween3=_material.DOFloat(31.6f, Value, 15f);
+        tween3.SetEase(Ease.InOutExpo);
+        tween3.onComplete += () => { SceneLoader.GetInstance().animationComplete = true; };
         await SceneLoader.GetInstance().LoadSceneAsync("Nothing");
         
         Destroy(parent.GameObject());

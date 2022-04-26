@@ -3,7 +3,7 @@ Shader "Custom/SceneFade"
     Properties
     {
         _NoiseTex ("_NoiseTex", 2D) = "white" {}
-        _Value("_Value",range(6.1,18.8))=6.1
+        _Value("_Value",range(18.62,31.6))=6
 
     }
     SubShader
@@ -116,13 +116,7 @@ Shader "Custom/SceneFade"
                     col += 1.5 * (1.0 - z) * c * w;
                     pos += stp;
                 }
-                float4 coll=float4(col,1);
-                float4 white=float4(1,1,1,1);
-                if (_Value<15)
-                {
-                    white=0;
-                }
-                return coll+white*(_Value-15)/3;
+                return float4(col,1);
             }
             ENDHLSL
          
