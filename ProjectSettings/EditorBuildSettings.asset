@@ -6,9 +6,15 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scene/Nothing.unity
+    guid: 655dc5e73c6017c45aa1c45642c37e21
+  - enabled: 1
     path: Assets/Scene/01_Interstellar/01_Interstellar.unity
     guid: 28f2f95d417765746af31482161f2de1
   - enabled: 1
-    path: Assets/Scene/Nothing.unity
-    guid: 655dc5e73c6017c45aa1c45642c37e21
+    path: Assets/Scene/02_CircleZoom/02_CircleZoom 1.unity
+    guid: 0322cccf81ce9354bbdff248302dba19
+  - enabled: 1
+    path: Assets/Scene/02_CircleZoom/Other/Scene2.unity
+    guid: 0b3d1cdc815bc2d46aa3a9cbf4901016
   m_configObjects: {}

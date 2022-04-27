@@ -17,15 +17,20 @@ public class SceneLoader
     }
 
     public bool animationComplete=false;
+    
 
     public async Task LoadSceneAsync(string name)
     {
         var sceneBuffer= SceneManager.LoadSceneAsync(name,LoadSceneMode.Single);
+        sceneBuffer.allowSceneActivation = false;
         while (!sceneBuffer.isDone||!animationComplete)
         {
+            if (sceneBuffer.progress>=0.89&&animationComplete)
+            {
+                sceneBuffer.allowSceneActivation = true;
+            }
             await Task.Yield();
         }
-        sceneBuffer.allowSceneActivation = true;
         animationComplete = false;
     }
 

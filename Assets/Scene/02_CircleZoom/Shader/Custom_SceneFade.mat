@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Interstellar
-  m_Shader: {fileID: 4800000, guid: 7d819fe63f143e04782fe7e15b059d9b, type: 3}
+  m_Name: Custom_SceneFade
+  m_Shader: {fileID: 4800000, guid: ac4ca99ce9304684aace6fc20ef423b9, type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords: []
   m_LightmapFlags: 4
@@ -25,15 +25,12 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _NoiseTex:
-        m_Texture: {fileID: 2800000, guid: 5f74ce1131553a14ea156459e5ececc7, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _TransTex:
-        m_Texture: {fileID: 2800000, guid: 5f74ce1131553a14ea156459e5ececc7, type: 3}
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _Value: 30
-    m_Colors: []
+    - _Value: 2
+    m_Colors:
+    - _Center: {r: 0.48984787, g: -0.17435622, b: 2.5631018, a: 0}
   m_BuildTextureStacks: []

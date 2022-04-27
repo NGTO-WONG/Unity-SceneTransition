@@ -64,7 +64,7 @@ Shader "Custom/SceneFade"
                 return pow(col, float3(1.0 / GAMMA, 1.0 / GAMMA, 1.0 / GAMMA));
             }
 
-            float4 Noise(in float2 x)
+            float4 Noise(in int2 x)
             {
                 return tex2D(_NoiseTex, (x + 0.5) / 256.0);
             }
@@ -107,7 +107,7 @@ Shader "Custom/SceneFade"
                 float3 pos = 2.0 * stp + .5;
                 for (int i = 0; i < 20; i++)
                 {
-                    float z = Noise(float2(pos.xy)).x;
+                    float z = Noise(int2(pos.xy)).x;
                     z = frac(z - offset);
                     float d = 50.0 * z - pos.z;
                     float w = pow(max(0.0, 1.0 - 8.0 * length(frac(pos.xy) - .5)), 2.0);

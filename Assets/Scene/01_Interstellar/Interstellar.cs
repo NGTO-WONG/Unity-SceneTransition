@@ -27,11 +27,11 @@ public class Interstellar : MonoBehaviour
         DontDestroyOnLoad(parent);
         transition.GameObject().SetActive(true);
         _button.GameObject().SetActive(false);
-        var tween3=_material.DOFloat(31.6f, Value, 15f);
+        var tween3=_material.DOFloat(30f, Value, 15f);
         tween3.SetEase(Ease.InOutExpo);
         tween3.onComplete += () => { SceneLoader.GetInstance().animationComplete = true; };
         await SceneLoader.GetInstance().LoadSceneAsync("Nothing");
-        
-        Destroy(parent.GameObject());
+        transition.GameObject().SetActive(false);
+
     }
 }
