@@ -61,7 +61,7 @@ public class CircleZoom : MonoBehaviour
             loading = true;
             SceneLoader.GetInstance().animationComplete = true;
             await SceneLoader.GetInstance().LoadSceneAsync("Scene2");
-            await Task.Delay(3000);
+            await Task.Delay(1000);
             var player = GameObject.FindWithTag("Player");
             var viewportPos2 = Camera.main.WorldToViewportPoint(player.transform.position);
             _material.SetVector(Center, viewportPos2);
