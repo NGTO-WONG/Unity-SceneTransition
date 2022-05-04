@@ -32,5 +32,5 @@ Material:
     m_Floats:
     - _Value: 2
     m_Colors:
-    - _Center: {r: 0.48984787, g: -0.17435622, b: 2.5631018, a: 0}
+    - _Center: {r: 0.48984897, g: -0.17453288, b: 2.5631018, a: 0}
   m_BuildTextureStacks: []
